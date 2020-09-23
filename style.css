@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  background-color: white;
+  opacity: 1;
+}
+
+h1, h2, p, li, a, button{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+}
+
+img{
+  cursor: pointer;
+}
+
+.imgDesc{
+  opacity: 0;
+  background-color:  #444161;
+  color: white;
+  border-radius: 5px;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+.linkBtns{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 1vh;
+}
+
+.blueBtn{
+  background-color: #38a9ff;
+  color:white;
+  width: 10vw;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.greenBtn{
+  background-color: #00de25;
+  color:white;
+  width: 10vw;
+  border-radius: 5px;
+  border-style: none;
+}
+
+h1{
+  font-size: 28px;
+}
+
+h2{
+  font-size: 22px;
+}
+
+.material-icons{
+  background-color: #FFFFFFFF;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 10%;
+  background-color: #444161;
+}
+
+tabArea{
+
+}
+
+carosel{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+carosel .btn{
+
+}
+
+titleTxt{
+  padding-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+project{
+  padding: 10vw;
+  display: flex;
+  flex-direction: column;
+}
+
+project .indented{
+  padding-left: 4vw;
+  padding-top: 1vh;
+}
+row{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.headerTxt{
+  color:  white;
+  background-color:  #444161;
+}
+.optionTxt{
+  color:  #c7c7c7;
+  background-color:  #444161;
+}
+.optionTxt:hover{
+  color:white;
+  cursor: pointer;
+}
+.headerTxtSpace{
+  color:  #444161;
+  background-color:  #444161;
+}
+.whiteSpacing{
+  color:white;
+
+}
+
+.selected{
+  color: white;
+}
