@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Brian's Site</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="https://i.ibb.co/LRvY9YZ/output-onlinepngtools-8.png">
+  </head>
+  <body>
+
+    <!-- Header Area -->
+    <header>
+      <nav>
+        <h2 class="headerTxt"> Brian Rodgers Vargo </h1>
+        <p class="headerTxt"> Software Engineer </p>
+      </nav>
+
+      <row>
+        <p class="optionTxt selected"> Work  </p>
+        <p class="headerTxtSpace"> spacing </p>
+        <p class="optionTxt "> About </p>
+        <p class="headerTxtSpace"> spacing </p>
+        <p class="optionTxt "> Connect </p>
+      </row>
+    </header>
+
+
+    <!-- Work Area -->
+    <tabArea>
+      <titleTxt> <h1>My Work</h1> </titleTxt>
+
+      <!-- ipdd analytics -->
+      <project>
+        <h2> Lexis Nexis Survey Analyics </h2>
+        <p  class="indented"> Aug - Sep 2020 <p>
+        <p class="indented"> Developed web page to help managers understand IPDD survey results  </p>
+
+        <carosel>
+          <img id='ln-analytics-img' class="indented projectImg" style='height:100%; width: 100%;' src="https://i.ibb.co/Ry9SyQq/Screenshot-3-Copy.png" alt="ipdd analysis project landing page screencap">
+        </carosel>
+
+        <div class="linkBtns">
+          <p id='ln-analytics-img-desc' class="imgDesc"> Viewing an individual's response </p>
+          <p class="whiteSpacing"> -- </p>
+          <button type="button" onclick="window.open('https://github.com/bethanrv/LN_IPDD_Analytics_Demo/blob/master/index.html')" class="greenBtn" name="button"> Code </button>
+          <p class="whiteSpacing"> -- </p>
+          <button type="button" onclick="window.open('https://bethanrv.github.io/LN_IPDD_Analytics_Demo/')" class="blueBtn" name="button"> Link </button>
+        </div>
+      </project>
+
+      <!-- ipdd survey -->
+      <project>
+        <h2> Lexis Nexis IPDD Survey </h2>
+        <p  class="indented"> Jun - Jul 2020 <p>
+        <p class="indented"> Created a dynamic survey to help gain insights into what clients want in an IP database </p>
+
+        <carosel>
+          <img id='ln-survey-img' class="indented projectImg" style='height:100%; width: 100%;' src="https://i.ibb.co/MnB1jdL/survey-ponts.png" alt="ipdd survey project point alloction question screencap">
+        </carosel>
+
+        <div class="linkBtns">
+          <p id='ln-survey-img-desc' class="imgDesc"> View of a 100 point allocation question </p>
+          <p class="whiteSpacing"> -- </p>
+          <button type="button" onclick="window.open('https://github.com/bethanrv/lexis-nexis-ipdd-questionnaire')" class="greenBtn" name="button"> Code </button>
+          <p class="whiteSpacing"> -- </p>
+          <button type="button" onclick="window.open('https://bethanrv.github.io/lexis-nexis-ipdd-questionnaire/')" class="blueBtn" name="button"> Link </button>
+        </div>
+      </project>
+
+      <!-- reed tech webinar reporter -->
+      <project>
+        <h2> Reed Tech Webinar Reporter </h2>
+        <p  class="indented"> May - Jun 2019 <p>
+        <p class="indented"> Created web page assist in the generation of conference attendence reports </p>
+
+        <carosel>
+          <img id='rt-webinar-reporter-img' class="indented projectImg" style='height:100%; width: 100%;' src="https://i.ibb.co/48g1Vk8/webinar-download.png" alt="Reed tech webinar reporter project download results screencap">
+        </carosel>
+
+        <div class="linkBtns">
+          <p id='rt-webinar-reporter-img-desc' class="imgDesc"> Downloading results plus other options </p>
+          <p class="whiteSpacing"> -- </p>
+          <button type="button" onclick="window.open('https://github.com/bethanrv/Web_hosted-Webinar-Reporter')" class="greenBtn" name="button"> Code </button>
+          <p class="whiteSpacing"> -- </p>
+          <button type="button" onclick="window.open('https://bethanrv.github.io/Web_hosted-Webinar-Reporter/')" class="blueBtn" name="button"> Link </button>
+        </div>
+      </project>
+
+    </tabArea>
+
+  </body>
+</html>
+
+<script type="text/javascript">
+
+  //properties --------------------------------------
+
+  //images to render for projects
+  let ln_analysis_images = ['https://i.ibb.co/Ry9SyQq/Screenshot-3-Copy.png', 'https://i.ibb.co/bgr12tC/analytics-question-breakdown.png', 'https://i.ibb.co/wYTN2qp/analytics-breakdown-pie.png', 'https://i.ibb.co/Y7CdGVP/analytics-cross.png']
+  let ln_analysis_images_descriptions = ["Viewing an individual's responses", 'Breakdown of responses via bar graph', 'Breakdown of responses via pie chart', 'Cross correlation example' ]
+  let ln_analysis_img_index = 0;
+
+  let ln_survey_images = ['https://i.ibb.co/MnB1jdL/survey-ponts.png', 'https://i.ibb.co/VV5Mz1G/survey-select.png', 'https://i.ibb.co/F46QMsP/survey-title.png']
+  let ln_survey_images_descriptions = ['View of a 100 point allocation question', 'Example of multi select question', 'Simple landing page']
+  let ln_survey_img_index = 0;
+
+  let rt_webinar_reporter_images = ['https://i.ibb.co/48g1Vk8/webinar-download.png', 'https://i.ibb.co/Vtcqfpx/webinar-landing.png', 'https://i.ibb.co/DWCVTVD/webinar-results.png']
+  let rt_webinar_reporter_images_descriptions = ['Downloading results plus other options', 'Simple user input area', 'Results Page']
+  let rt_webinar_reporter_img_index = 0;
+
+
+  //on load...
+  window.onload = function(){
+    var projectImages = document.getElementsByClassName('projectImg');
+    let i = 0;
+    while(i < projectImages.length){
+      projectImages[i].onclick = function(){nextImg(this.id)}
+      projectImages[i].onmouseover = function(){showDescription(this.id)}
+      projectImages[i].onmouseleave = function(){hideDescription(this.id)}
+      i++;
+    }
+  }
+
+  function nextImg(id){
+    let img = '';
+    if(id == 'ln-analytics-img'){
+      ln_analysis_img_index++;
+      ln_analysis_img_index %= ln_analysis_images.length;
+      document.getElementById(id + '-desc').textContent = ln_analysis_images_descriptions[ln_analysis_img_index];
+      img = ln_analysis_images[ln_analysis_img_index];
+    }
+    else if(id == 'ln-survey-img'){
+      ln_survey_img_index++;
+      ln_survey_img_index %= ln_survey_images.length;
+      document.getElementById(id + '-desc').textContent = ln_survey_images_descriptions[ln_survey_img_index];
+      img = ln_survey_images[ln_survey_img_index];
+    }
+    else if(id == 'rt-webinar-reporter-img'){
+      rt_webinar_reporter_img_index++;
+      rt_webinar_reporter_img_index %= rt_webinar_reporter_images.length;
+      document.getElementById(id + '-desc').textContent = rt_webinar_reporter_images_descriptions[rt_webinar_reporter_img_index];
+      img = rt_webinar_reporter_images[rt_webinar_reporter_img_index];
+    }
+    swapImages(id, img);
+  }
+
+  function showDescription(id){
+    document.getElementById(id + '-desc').style.opacity = 1;
+  }
+  function hideDescription(id){
+    document.getElementById(id + '-desc').style.opacity = 0;
+  }
+
+
+  //swap images with animation
+  function swapImages(id, newImg){
+
+    //fade out image
+    fadeOut(id, newImg);
+
+  }
+
+  //fade images in and out
+
+  function fadeOut(id, newImg){
+    //slowly decrease opacity
+    let target = document.getElementById(id);
+    if(!target.style.opacity) target.style.opacity = 1;
+
+    const fadeEffect = setInterval(function(){
+      if(target.style.opacity > 0) {target.style.opacity -= 0.05; }
+      else {target.src = newImg; fadeIn(id); clearInterval(fadeEffect);}
+    },10);
+  }
+
+  function fadeIn(id){
+    //slowly increase opacity
+    let target = document.getElementById(id);
+
+    let currentOpacity = 0;
+
+    const fadeInEffect = setInterval(function(){
+      currentOpacity += 0.01;
+      if(currentOpacity < 1) {target.style.opacity = currentOpacity;}
+      else clearInterval(fadeInEffect);
+    },10);
+  }
+
+
+</script>
