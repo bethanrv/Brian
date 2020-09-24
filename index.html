@@ -17,17 +17,17 @@
       </nav>
 
       <row>
-        <p class="optionTxt selected"> Work  </p>
+        <p id='workNav' class="optionTxt selected" onclick="selectTab('work')"> Work  </p>
         <p class="headerTxtSpace"> spacing </p>
-        <p class="optionTxt "> About </p>
+        <p id='aboutNav' class="optionTxt " onclick="selectTab('about')"> About </p>
         <p class="headerTxtSpace"> spacing </p>
-        <p class="optionTxt "> Connect </p>
+        <p id='connectNav'class="optionTxt " onclick="selectTab('connect')"> Connect </p>
       </row>
     </header>
 
 
     <!-- Work Area -->
-    <tabArea>
+    <tabArea id='workTab'>
       <titleTxt> <h1>My Work</h1> </titleTxt>
 
       <!-- ipdd analytics -->
@@ -71,7 +71,7 @@
       <!-- reed tech webinar reporter -->
       <project>
         <h2> Reed Tech Webinar Reporter </h2>
-        <p  class="indented"> May - Jun 2019 <p>
+        <p  class="indented"> May - Jun 2019 </p>
         <p class="indented"> Created web page assist in the generation of conference attendence reports </p>
 
         <carosel>
@@ -87,6 +87,78 @@
         </div>
       </project>
 
+    </tabArea>
+
+
+
+    <!-- About Me -->
+    <tabArea id='aboutTab' >
+      <titleTxt> <h1>About Me</h1> </titleTxt>
+
+      <!-- Education -->
+      <project>
+        <h1 style="padding-bottom:1vh;" > Education </h1>
+
+        <div class="imgDescContainer">
+          <img src="https://iili.io/2YJSXS.png" alt="miami oh logo" style="width:5vw; height:5vh; position:relative; top: 2vh; left:0vw; cursor: default;">
+          <nav>
+            <h2  class="indented-small"> Miami University of Ohio </h2>
+            <p  class="indented-small"> B.S. Software Engineering </p>
+            <p  class="indented-small"> 2016-2020 </p>
+
+            <!-- Courses -->
+            <h2  class="indented-small" style="padding-top:4vh;"> Courses <i id="course-toggle" class="material-icons clickable expandToggle" style="position:relative; top:0.5vh; color:#444161;"> arrow_drop_up </i> </h2>
+            <div id="course-content">
+              <p  class="indented" style="padding-top: 2vh;"> Freshman: General Engineering Courses</p>
+              <ul  class="indented-large">
+                <li style="padding-bottom:1vh;"> Natural Sciences - Physics, Chemistry </li>
+                <li style="padding-bottom:1vh;"> Mathematics - Calc II, Discrete Math  </li>
+                <li style="padding-bottom:1vh;"> Humanities - English, Intro to Globalization  </li>
+              </ul>
+              <p  class="indented" style="padding-top: 2vh;"> Sophomore: Intro To Computer Science And Software Engineering</p>
+              <ul  class="indented-large">
+                <li style="padding-bottom:1vh;"> Computer Sciece Fundementals - Object Obiented Programming, Data Structures </li>
+                <li style="padding-bottom:1vh;"> Software Engineering Practices - Software Dev Lifecycle, QA, Architecture  </li>
+                <li style="padding-bottom:1vh;"> Humanities - Music Composition  </li>
+              </ul>
+              <p  class="indented" style="padding-top: 2vh;"> Junior: Intro To Web Development And Additional CS Topics</p>
+              <ul  class="indented-large">
+                <li style="padding-bottom:1vh;"> Web Development - Database Programming, API Development, Front-End Projects </li>
+                <li style="padding-bottom:1vh;"> Additional CS Topics - Introduction To Systems Programming, Python Programming  </li>
+                <li style="padding-bottom:1vh;"> Humanities - Public Speaking, Technical Writing </li>
+              </ul>
+              <p  class="indented" style="padding-top: 2vh;"> Senior: Collaborative Projects In Web Development And AI/ML</p>
+              <ul  class="indented-large">
+                <li style="padding-bottom:1vh;"> Web Development - Back End developer For Team Creating Social Media Website. Created DB Procedures and Secure API </li>
+                <li style="padding-bottom:1vh;"> AI Project - Challenged Deep Learning Image Detection Against Eigenfaces Inspired Algorithm  </li>
+                <li style="padding-bottom:1vh;"> ML Project - Investigated Longitudinal Factors Leading To Suicidal Thoughs And Attempts </li>
+                <li style="padding-bottom:1vh;"> Mathematics - Mathematics - Linear Algebra, Introduction To Graphics  </li>
+              </ul>
+            </div>
+
+
+            <!-- Activities -->
+            <h2  class="indented-small" style="padding-top:4vh;"> Activities <i id="activities-toggle" class="material-icons clickable expandToggle" style="position:relative; top:0.5vh; color:#444161;"> arrow_drop_up </i> </h2>
+            <div id="activities-content">
+              <p  class="indented" style="padding-top: 2vh;"> Python Club (MuPy) Founder - Led CS Majors In Teaching Students How To Code With Python</p>
+              <p  class="indented" style="padding-top: 2vh;"> Audio Enineering Club Member - Learned The Technical Side Of Music</p>
+              <p  class="indented" style="padding-top: 2vh;"> Dodgeball Club - Very Serious In The Midwest!</p>
+            </div>
+
+          </nav>
+        </div>
+
+
+
+      </project>
+
+
+    </tabArea>
+
+
+    <!-- Connect -->
+    <tabArea id='connectTab' >
+      <titleTxt> <h1>Connect</h1> </titleTxt>
     </tabArea>
 
   </body>
@@ -112,6 +184,11 @@
 
   //on load...
   window.onload = function(){
+
+    //load my work tab...
+    document.getElementById('workTab').style.display = 'block';
+
+    //load click function for images
     var projectImages = document.getElementsByClassName('projectImg');
     let i = 0;
     while(i < projectImages.length){
@@ -120,6 +197,42 @@
       projectImages[i].onmouseleave = function(){hideDescription(this.id)}
       i++;
     }
+
+    //load collapse/exand function for btns
+    var toggleBtns = document.getElementsByClassName('expandToggle');
+    i = 0;
+    while(i < toggleBtns.length){
+      toggleBtns[i].onclick = function(){toggleArea(this.id)};
+      i++;
+    }
+  }
+
+
+  //expand or collapse and Area
+  function toggleArea(id){
+    let target = document.getElementById((id.substring(0,id.indexOf('-'))) + '-content');
+    if(!target.style.opacity) target.style.opacity = 1;
+    let targetStatus = Math.abs(target.style.opacity - 1); // if opacity is 1 then set to 0. if 0 set to 1
+    target.style.opacity = targetStatus;
+    if(targetStatus == 0) {target.style.display = 'none'; document.getElementById(id).textContent = 'arrow_drop_down';}
+    else { target.style.display = 'block';  document.getElementById(id).textContent = 'arrow_drop_up';}
+  }
+
+  //collapse all tabs
+  function collapseTabs(){
+    document.getElementById('workTab').style.display = 'none';
+    document.getElementById('workNav').classList.remove("selected");
+    document.getElementById('aboutTab').style.display = 'none';
+    document.getElementById('aboutNav').classList.remove("selected");
+    document.getElementById('connectTab').style.display = 'none';
+    document.getElementById('connectNav').classList.remove("selected");
+  }
+
+  //select a tab to open
+  function selectTab(tab){
+    collapseTabs();
+    document.getElementById(tab + 'Nav').classList.add("selected");
+    document.getElementById(tab + 'Tab').style.display = 'block';
   }
 
   function nextImg(id){
@@ -152,7 +265,6 @@
     document.getElementById(id + '-desc').style.opacity = 0;
   }
 
-
   //swap images with animation
   function swapImages(id, newImg){
 
@@ -162,8 +274,7 @@
   }
 
   //fade images in and out
-
-  function fadeOut(id, newImg){
+    function fadeOut(id){
     //slowly decrease opacity
     let target = document.getElementById(id);
     if(!target.style.opacity) target.style.opacity = 1;
