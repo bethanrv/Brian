@@ -76,7 +76,7 @@ header{
 }
 
 tabArea{
-
+  display: none;
 }
 
 carosel{
@@ -104,6 +104,19 @@ project .indented{
   padding-left: 4vw;
   padding-top: 1vh;
 }
+project .indented-small{
+  padding-left: 2vw;
+  padding-top: 1vh;
+}
+project .indented-large{
+  padding-left: 6vw;
+  padding-top: 1vh;
+}
+.imgDescContainer{
+  display: flex;
+  justify-content: flex-start;
+}
+
 row{
   display: flex;
   align-items: center;
@@ -126,6 +139,7 @@ row{
   color:  #444161;
   background-color:  #444161;
 }
+
 .whiteSpacing{
   color:white;
 
@@ -133,4 +147,8 @@ row{
 
 .selected{
   color: white;
+}
+
+.clickable{
+  cursor:pointer;
 }
