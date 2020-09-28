@@ -39,6 +39,12 @@ img{
   padding-top: 1vh;
 }
 
+.linkTxt{}
+.linkTxt:hover{
+  color:dodgerblue;
+  text-decoration: underline;
+}
+
 .blueBtn{
   background-color: #38a9ff;
   color:white;
