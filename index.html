@@ -92,19 +92,26 @@
 
 
     <!-- About Me -->
-    <tabArea id='aboutTab' >
+    <tabArea id='aboutTab' style="padding-bottom:5vh;">
       <titleTxt> <h1>About Me</h1> </titleTxt>
 
-      <!-- Education -->
-      <project>
-        <h1 style="padding-bottom:1vh;" > Education </h1>
 
-        <div class="imgDescContainer">
-          <img src="https://iili.io/2YJSXS.png" alt="miami oh logo" style="width:5vw; height:5vh; position:relative; top: 2vh; left:0vw; cursor: default;">
+      <div style="display:flex; justify-content:center; padding: 3vh;">
+        <img src="https://i.ibb.co/PwbWnps/image.jpg" alt="Brian Image" style="width:15vw; height:auto; border-radius:50%;">
+      </div>
+
+
+      <!-- Education -->
+      <project style="padding-top: 2vh; padding-bottom: 2vh;">
+        <h1 style="padding-bottom:1vh;" > Education <i id="education-toggle" class="material-icons clickable expandToggle" style="position:relative; top:0.5vh; color:#444161;"> arrow_drop_up </i> </h1>
+
+        <div id="education-content" class="imgDescContainer" >
+          <!--<img src="https://iili.io/2YJSXS.png" alt="miami oh logo" style="width:5vw; height:5vh; position:relative; top: 2vh; left:0vw; cursor: default;"> -->
           <nav>
             <h2  class="indented-small"> Miami University of Ohio </h2>
             <p  class="indented-small"> B.S. Software Engineering </p>
             <p  class="indented-small"> 2016-2020 </p>
+
 
             <!-- Courses -->
             <h2  class="indented-small" style="padding-top:4vh;"> Courses <i id="course-toggle" class="material-icons clickable expandToggle" style="position:relative; top:0.5vh; color:#444161;"> arrow_drop_up </i> </h2>
@@ -141,17 +148,111 @@
             <h2  class="indented-small" style="padding-top:4vh;"> Activities <i id="activities-toggle" class="material-icons clickable expandToggle" style="position:relative; top:0.5vh; color:#444161;"> arrow_drop_up </i> </h2>
             <div id="activities-content">
               <p  class="indented" style="padding-top: 2vh;"> Python Club (MuPy) Founder - Led CS Majors In Teaching Students How To Code With Python</p>
+              <p  class="indented" style="padding-top: 2vh;"> Teaching Assistant - Object Oriented Programming With Java </p>
               <p  class="indented" style="padding-top: 2vh;"> Audio Enineering Club Member - Learned The Technical Side Of Music</p>
               <p  class="indented" style="padding-top: 2vh;"> Dodgeball Club - Very Serious In The Midwest!</p>
             </div>
 
           </nav>
         </div>
-
-
-
       </project>
 
+      <!-- Personal Projects -->
+      <project style="padding-top: 2vh; padding-bottom: 2vh;">
+        <h1 style="padding-bottom:1vh;" > Personal Projects <i id="projects-toggle" class="material-icons clickable expandToggle" style="position:relative; top:0.5vh; color:#444161;"> arrow_drop_up </i> </h1>
+      </project>
+
+      <div id="projects-content">
+        <!-- Survive -->
+        <project style="padding-top: 2vh;" >
+          <div class="indented">
+            <h2> Survive! </h2>
+            <p class=""  style="padding-top: 1vh;"> Open-world survival game. Craft, build, and explore to your hearts content </p>
+
+            <carosel style="padding-top: 1vh;">
+              <img id='survive-img' class=" projectImg" style='height:100%; width: 100%;' src="https://i.ibb.co/hRtDv0y/survive-main.png" alt="Survive Game Description">
+            </carosel>
+
+            <div class="linkBtns">
+              <p id='survive-img-desc' class="imgDesc"> Block Based Open World  </p>
+              <p class="whiteSpacing"> -- </p>
+              <button type="button" onclick="window.open('https://github.com/bethanrv/SurviveP5JS')" class="greenBtn" name="button"> Code </button>
+              <p class="whiteSpacing"> -- </p>
+              <button type="button" onclick="window.open('https://bethanrv.github.io/SurviveP5JS/')" class="blueBtn" name="button"> Link </button>
+            </div>
+          </div>
+        </project>
+
+        <!-- Tones -->
+        <project style="padding-top: 2vh;">
+          <div class="indented">
+            <h2> Tones </h2>
+            <p class=""  style="padding-top: 1vh;"> Frequency Visualiztion With JS. View Relationships Among Notes And Chords </p>
+
+            <carosel style="padding-top: 1vh;">
+              <img id='tones-img' class=" projectImg" style='height:100%; width: 100%;' src="https://i.ibb.co/sPDR87x/octave.png" alt="Tones simulation description">
+            </carosel>
+
+            <div class="linkBtns">
+              <p id='tones-img-desc' class="imgDesc"> Relationship Between A Note And An Octave Above </p>
+              <p class="whiteSpacing"> -- </p>
+              <button type="button" onclick="window.open('https://github.com/bethanrv/Tones')" class="greenBtn" name="button"> Code </button>
+              <p class="whiteSpacing"> -- </p>
+              <button type="button" onclick="window.open('https://bethanrv.github.io/Tones/')" class="blueBtn" name="button"> Link </button>
+            </div>
+          </div>
+        </project>
+
+        <!-- Stars -->
+        <project style="padding-top: 2vh;">
+          <div class="indented">
+            <h2> Stars </h2>
+            <p class=""  style="padding-top: 1vh;"> Interactive Newtonian Gravity Simulation </p>
+
+            <carosel style="padding-top: 1vh;">
+              <img id='stars-img' class=" projectImg" style='height:100%; width: 100%;' src="https://i.ibb.co/HppVftp/stars-main.png" alt="Tones simulation description">
+            </carosel>
+
+            <div class="linkBtns">
+              <p id='stars-img-desc' class="imgDesc"> Watch Bodies Move and Collide With One Another </p>
+              <p class="whiteSpacing"> -- </p>
+              <button type="button" onclick="window.open('https://github.com/bethanrv/Stars')" class="greenBtn" name="button"> Code </button>
+              <p class="whiteSpacing"> -- </p>
+              <button type="button" onclick="window.open('https://bethanrv.github.io/Stars/')" class="blueBtn" name="button"> Link </button>
+            </div>
+          </div>
+        </project>
+      </div>
+
+
+      <!-- Hobbies -->
+      <project style="padding-top: 2vh; padding-bottom: 4vh;">
+        <h1 style="padding-bottom:1vh;" > Hobbies <i id="hobbies-toggle" class="material-icons clickable expandToggle" style="position:relative; top:0.5vh; color:#444161;"> arrow_drop_up </i> </h1>
+      </project>
+      <div id="hobbies-content">
+        <project style="padding-top: 2vh; padding-bottom: 2vh;">
+          <div class="indented">
+            <h2> Music </h2>
+            <p class=""  style="padding-top: 1vh;"> I've Been Playing The Guitar For 7 Years! </p>
+            <p class=""  style="padding-top: 1vh;"> Currently Learning Piano And Music Theory </p>
+          </div>
+        </project>
+        <project style="padding-top: 2vh; padding-bottom: 2vh;">
+          <div class="indented">
+            <h2> Games </h2>
+            <p class=""  style="padding-top: 1vh;"> My Favorite Are Terraria And Minecraft - Open World Survival Games </p>
+            <p class=""  style="padding-top: 1vh;"> I Also Enjoy A Wide Assortment Of Card Games That I Learned Studying In Ohio! </p>
+          </div>
+        </project>
+        <project style="padding-top: 2vh; padding-bottom: 2vh;">
+          <div class="indented">
+            <h2> Books </h2>
+            <p class=""  style="padding-top: 1vh;"> Currently Reading  'Lost In Math', By Sabine Hossenfelder </p>
+            <p class=""  style="padding-top: 1vh;"> Hossenfelder Rasies Concerns About The Lack Of Advancement In Physics Over The Last 70 Years, And Relates This Stall To Physicists Obsession With 'Beauty'. </p>
+            <p class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://www.google.com/search?q=lost+in+math&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02SNzfyK9uuNfQlCdSQbp6Pbe7CVw:1601313836482&source=lnms&tbm=shop&sa=X&ved=2ahUKEwj2xpbzrozsAhU2oHIEHd1WAswQ_AUoAXoECB4QAw&biw=1920&bih=937')"> Click Here To Buy Online </p>
+          </div>
+        </project>
+      </div>
 
     </tabArea>
 
@@ -159,6 +260,33 @@
     <!-- Connect -->
     <tabArea id='connectTab' >
       <titleTxt> <h1>Connect</h1> </titleTxt>
+
+      <project style="padding-top: 2vh; padding-bottom: 2vh;">
+        <h2> Get In Touch </h2>
+        <div class="indented">
+          <p id="phoneTxt" class="linkTxt"  style="padding-top: 1vh;" onclick="copyTxt('610-233-6728', 'phoneTxt')"> Phone: 610-233-6728 </p>
+          <p id="primaryEmailTxt" class="linkTxt"  style="padding-top: 1vh;" onclick="copyTxt('rodgersvargoe@gmail.com', 'primaryEmailTxt')"> Email (Primary): rodgersvargoe@gmail.com </p>
+          <p id="academicEmailTxt" class="linkTxt"  style="padding-top: 1vh;" onclick="copyTxt('rodgerb@miamioh.edu', 'academicEmailTxt')"> Email (Academic): rodgerb@miamioh.edu </p>
+        </div>
+      </project>
+
+      <project style="padding-top: 2vh; padding-bottom: 2vh;">
+        <h2> Find Me Online </h2>
+        <div class="indented">
+          <p  class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://linkedIn.com/in/BrianRodgersVargo')"> LinkedIn: linkedIn.com/in/BrianRodgersVargo </p>
+          <p  class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://github.com/bethanrv')"> GitHub: Github.com/Bethanrv </p>
+        </div>
+      </project>
+
+      <project style="padding-top: 2vh; padding-bottom: 2vh;">
+        <h2> Considering Hiring Me? </h2>
+        <div class="indented">
+          <p  class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://drive.google.com/file/d/1fiUfmBmw-NW8OA2SuxBxevLlGiD1shS4/view?usp=sharing')"> Resume: Web Development Work </p>
+          <p  class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://drive.google.com/file/d/11wuIDvfiPbqC_ANXCqheSXJf10wtBuge/view?usp=sharing')">Resume: Data Analyics Work </p>
+        </div>
+      </project>
+
+
     </tabArea>
 
   </body>
@@ -181,6 +309,17 @@
   let rt_webinar_reporter_images_descriptions = ['Downloading results plus other options', 'Simple user input area', 'Results Page']
   let rt_webinar_reporter_img_index = 0;
 
+  let survive_images = ['https://i.ibb.co/hRtDv0y/survive-main.png', 'https://i.ibb.co/Bscr7fx/survive-build.png', 'https://i.ibb.co/6bpBJdm/survive-night.png', 'https://i.ibb.co/BLTrNh7/survive-hit.png', 'https://i.ibb.co/bRXV45G/survive-over.png'];
+  let survive_images_descriptions = ['Block Based Open World', 'Collect Items And Build Structures', 'Night Time Is Dangerous!', 'Try Not To Get Hit By Zombies...', 'Try Again?']
+  let survive_img_index = 0;
+
+  let tones_images = ['https://i.ibb.co/sPDR87x/octave.png', 'https://i.ibb.co/K7CKNL1/minor.png', 'https://i.ibb.co/N2NLrPh/minor-zoom.png', 'https://i.ibb.co/ydz0MDd/major-zoom.png'];
+  let tones_images_descriptions = ['Relationship Between A Note And An Octave Above', 'Relationship Of Notes In A Minor Chord', 'Zoomed In Minor Chord', 'Zoomed In Major Chord'];
+  let tones_img_index = 0;
+
+  let stars_images = ['https://i.ibb.co/HppVftp/stars-main.png', 'https://i.ibb.co/vQsh5CZ/stars-strong.png', 'https://i.ibb.co/MNtNDBw/stars-black-hole.png'];
+  let stars_images_descriptions = ['Watch Bodies Move And Collide With One Another', 'Strengthen Or Weaken The Gravitational Constant', 'Look Out For Black Holes!'];
+  let stars_img_index = 0;
 
   //on load...
   window.onload = function(){
@@ -207,6 +346,24 @@
     }
   }
 
+
+
+  //copy input text to user clipboard
+  function copyTxt(txt, id){
+
+    const el = document.createElement('textarea');
+    el.value = txt;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+
+    //tell user that info has been copied
+    let originalTxt = document.getElementById(id).textContent; //store original text
+    document.getElementById(id).textContent = 'Copied'; //set new text to 'copied'
+    setTimeout(function(){ document.getElementById(id).textContent = originalTxt }, 1000);
+
+  }
 
   //expand or collapse and Area
   function toggleArea(id){
@@ -255,6 +412,24 @@
       document.getElementById(id + '-desc').textContent = rt_webinar_reporter_images_descriptions[rt_webinar_reporter_img_index];
       img = rt_webinar_reporter_images[rt_webinar_reporter_img_index];
     }
+    else if(id == 'survive-img'){
+      survive_img_index++;
+      survive_img_index %= survive_images.length;
+      document.getElementById(id + '-desc').textContent = survive_images_descriptions[survive_img_index];
+      img = survive_images[survive_img_index];
+    }
+    else if(id == 'tones-img'){
+      tones_img_index++;
+      tones_img_index %= tones_images.length;
+      document.getElementById(id + '-desc').textContent = tones_images_descriptions[tones_img_index];
+      img = tones_images[tones_img_index];
+    }
+    else if(id == 'stars-img'){
+      stars_img_index++;
+      stars_img_index %= stars_images.length;
+      document.getElementById(id + '-desc').textContent = stars_images_descriptions[stars_img_index];
+      img = stars_images[stars_img_index];
+    }
     swapImages(id, img);
   }
 
@@ -274,14 +449,14 @@
   }
 
   //fade images in and out
-    function fadeOut(id){
+    function fadeOut(id, newImg){
     //slowly decrease opacity
     let target = document.getElementById(id);
     if(!target.style.opacity) target.style.opacity = 1;
 
     const fadeEffect = setInterval(function(){
       if(target.style.opacity > 0) {target.style.opacity -= 0.05; }
-      else {target.src = newImg; fadeIn(id); clearInterval(fadeEffect);}
+      else {target.src = newImg; fadeIn(id, newImg); clearInterval(fadeEffect);}
     },10);
   }
 
