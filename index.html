@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="https://i.ibb.co/LRvY9YZ/output-onlinepngtools-8.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
 
@@ -17,9 +18,9 @@
       </nav>
 
       <row>
-        <p id='workNav' class="optionTxt selected" onclick="selectTab('work')"> Work  </p>
+        <p id='workNav' class="optionTxt" onclick="selectTab('work')"> Work  </p>
         <p class="headerTxtSpace"> spacing </p>
-        <p id='aboutNav' class="optionTxt " onclick="selectTab('about')"> About </p>
+        <p id='aboutNav' class="optionTxt selected" onclick="selectTab('about')"> About </p>
         <p class="headerTxtSpace"> spacing </p>
         <p id='connectNav'class="optionTxt " onclick="selectTab('connect')"> Connect </p>
       </row>
@@ -95,10 +96,45 @@
     <tabArea id='aboutTab' style="padding-bottom:5vh;">
       <titleTxt> <h1>About Me</h1> </titleTxt>
 
+      <!-- photo of me and welcome message -->
+      <welcomeConainter>
+        <img  src="https://i.ibb.co/PwbWnps/image.jpg" alt="Brian Image" style="width:20vh; height:20vh; border-radius:50%;">
+        <txtFrame>
+          <txtBorder>
+            <p>
+              Hello there! I'm a programmer specializing in full-stack web development and data analytics.
+              Take a look around my website to learn a little about me.
+              You can view my resume, recent projects, work history, and more.
+            </p>
+          </txtBorder
+        </txtFrame>
+      </welcomeConainter>
 
-      <div style="display:flex; justify-content:center; padding: 3vh;">
-        <img src="https://i.ibb.co/PwbWnps/image.jpg" alt="Brian Image" style="width:15vw; height:auto; border-radius:50%;">
-      </div>
+
+      <!--Skills-->
+      <project style="padding-bottom: 2vh;">
+        <h1> Skills <i id="skills-toggle" class="material-icons clickable expandToggle" style="position:relative; top:0.5vh; color:#444161;"> arrow_drop_up </i> </h1>
+
+        <div id="skills-content">
+          <nav style="padding-top:1vh;">
+            <h2  class="indented-small"> Full-Stack Web Development </h2>
+            <p  class="indented-small"> Specializing In Building Full-Stack Web Applications From The Ground Up </p>
+            <p  class="indented-small"> Most Familiar With MS Tech: SQL, ASP.NET, Azure </p>
+          </nav>
+
+          <nav style="padding-top:2vh;">
+            <h2  class="indented-small"> Strong Communication </h2>
+            <p  class="indented-small"> Capable Of Giving Accessable Explanations For Systems Or Algorithms To An Unfamiliar Audience </p>
+          </nav>
+
+          <nav style="padding-top:2vh;">
+            <h2  class="indented-small"> Data Analytics </h2>
+            <p  class="indented-small"> Studied AI And Machine Learning Academically  </p>
+            <p  class="indented-small"> Worked With CDC To Research Suicide Attempts And Ideation </p>
+          </nav>
+        </div>
+
+      </project>
 
 
       <!-- Education -->
@@ -234,7 +270,8 @@
           <div class="indented">
             <h2> Music </h2>
             <p class=""  style="padding-top: 1vh;"> I've Been Playing The Guitar For 7 Years! </p>
-            <p class=""  style="padding-top: 1vh;"> Currently Learning Piano And Music Theory </p>
+            <p class=""  style="padding-top: 1vh;"> Learned Music Theory Basics On My Own</p>
+            <p class=""  style="padding-top: 1vh;"> Currently Learning To Play The Keyboard </p>
           </div>
         </project>
         <project style="padding-top: 2vh; padding-bottom: 2vh;">
@@ -249,7 +286,7 @@
             <h2> Books </h2>
             <p class=""  style="padding-top: 1vh;"> Currently Reading  "Lost In Math", By Sabine Hossenfelder </p>
             <p class=""  style="padding-top: 1vh;"> Hossenfelder Raises Concerns About The Lack Of Advancement In Physics Over The Last 70 Years, And Relates This Stall To Physicists Obsession With 'Beauty'. </p>
-            <p class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://www.google.com/search?q=lost+in+math&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02SNzfyK9uuNfQlCdSQbp6Pbe7CVw:1601313836482&source=lnms&tbm=shop&sa=X&ved=2ahUKEwj2xpbzrozsAhU2oHIEHd1WAswQ_AUoAXoECB4QAw&biw=1920&bih=937')"> Click Here To Buy Online </p>
+            <p class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://www.google.com/search?q=lost+in+math&rlz=1C1CHBF_enUS858US858&sxsrf=ALeKk02SNzfyK9uuNfQlCdSQbp6Pbe7CVw:1601313836482&source=lnms&tbm=shop&sa=X&ved=2ahUKEwj2xpbzrozsAhU2oHIEHd1WAswQ_AUoAXoECB4QAw&biw=1920&bih=937')"> 'Lost In Math' </p>
           </div>
         </project>
       </div>
@@ -324,8 +361,8 @@
   //on load...
   window.onload = function(){
 
-    //load my work tab...
-    document.getElementById('workTab').style.display = 'block';
+    //load about me tab to start...
+    document.getElementById('aboutTab').style.display = 'block';
 
     //load click function for images
     var projectImages = document.getElementsByClassName('projectImg');
