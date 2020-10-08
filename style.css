@@ -123,6 +123,22 @@ project .indented-large{
   justify-content: flex-start;
 }
 
+
+txtFrame{
+  width: 60vw;
+  padding-left: 10vw;
+  padding-top: 2vh;
+}
+
+txtFrame p{
+  padding: 1vh;
+  border-style: solid;
+  border-color:  #444161;
+  border-radius: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
 row{
   display: flex;
   align-items: center;
@@ -157,4 +173,36 @@ row{
 
 .clickable{
   cursor:pointer;
+}
+
+welcomeConainter{
+  display:flex;
+  flex-direction: row;
+  align-items:  center;
+  padding-left: 10vw;
+  padding-top:3vh;
+  padding-bottom: 4vh;
+}
+
+
+/*
+  Responsive Design
+*/
+/* Mobile */
+@media only screen and (max-width: 768px){
+  welcomeConainter{
+    flex-direction: column;
+    padding-left: 0;
+  }
+  txtFrame{
+    padding-left: 0;
+  }
+}
+/* Tablet */
+@media only screen and (max-width: 1288px){
+
+}
+/* Desktop */
+@media only screen and (min-width: 1289px){
+
 }
