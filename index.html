@@ -31,6 +31,26 @@
     <tabArea id='workTab'>
       <titleTxt> <h1>My Work</h1> </titleTxt>
 
+
+      <!-- tailored quisine 101 -->
+      <project>
+        <h2> Tailored Qusine Website </h2>
+        <p  class="indented"> Oct 2020 - Present <p>
+        <p class="indented"> Creating website to manage orders for Tailored Qusine meal kit delivery service  </p>
+
+        <carosel>
+          <img id='tq-img' class="indented projectImg" style='height:100%; width: 100%;' src="https://iili.io/KvsSGn.md.png" alt="tailored quisine project landing page screencap">
+        </carosel>
+
+        <div class="linkBtns">
+          <p id='tq-img-desc' class="imgDesc"> TQ Landing Page </p>
+          <p class="whiteSpacing"> -- </p>
+          <button type="button" onclick="window.open('https://github.com/bethanrv/TailoredQuisineDemo')" class="greenBtn" name="button"> Code </button>
+          <p class="whiteSpacing"> -- </p>
+          <button type="button" onclick="window.open('https://bethanrv.github.io/TailoredQuisineDemo/')" class="blueBtn" name="button"> Link </button>
+        </div>
+      </project>
+
       <!-- ipdd analytics -->
       <project>
         <h2> LexisNexis Survey Analyics </h2>
@@ -106,7 +126,7 @@
               Take a look around my website to learn a little about me.
               You can view my resume, recent projects, work history, and more.
             </p>
-          </txtBorder
+          </txtBorder>
         </txtFrame>
       </welcomeConainter>
 
@@ -318,8 +338,8 @@
       <project style="padding-top: 2vh; padding-bottom: 2vh;">
         <h2> Considering Hiring Me? </h2>
         <div class="indented">
-          <p  class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://drive.google.com/file/d/1TG8yBd5gKNc3lijWgtqrISibqwD-RDME/view?usp=sharing')"> Resume: Web Development Work </p>
-          <p  class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://drive.google.com/file/d/11wuIDvfiPbqC_ANXCqheSXJf10wtBuge/view?usp=sharing')">Resume: Data Analyics Work </p>
+          <p  class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://drive.google.com/file/d/1glAnE8rAmWLqoJwOiAgGadBd9CCn_k0k/view?usp=sharing')"> Download My Resume </p>
+          <!--<p  class="linkTxt"  style="padding-top: 1vh;" onclick="window.open('https://drive.google.com/file/d/11wuIDvfiPbqC_ANXCqheSXJf10wtBuge/view?usp=sharing')">Resume: Data Analyics Work </p> -->
         </div>
       </project>
 
@@ -334,6 +354,11 @@
   //properties --------------------------------------
 
   //images to render for projects
+
+  let tq_images = ['https://iili.io/KvL7Pn.png','https://iili.io/KvsU4s.md.png', 'https://iili.io/Kvsr3G.md.png', 'https://iili.io/KvsPyl.md.png', 'https://iili.io/Kvssu2.png'];
+  let tq_images_descriptions = ["Landing Page", "Schedule Orders Page", "Checkout Example", "Landing Page Food Shots", "Landing Page Instagram Link"];
+  let tq_img_index = 0;
+
   let ln_analysis_images = ['https://i.ibb.co/Ry9SyQq/Screenshot-3-Copy.png', 'https://i.ibb.co/bgr12tC/analytics-question-breakdown.png', 'https://i.ibb.co/wYTN2qp/analytics-breakdown-pie.png', 'https://i.ibb.co/Y7CdGVP/analytics-cross.png']
   let ln_analysis_images_descriptions = ["Viewing an individual's responses", 'Breakdown of responses via bar graph', 'Breakdown of responses via pie chart', 'Cross correlation example' ]
   let ln_analysis_img_index = 0;
@@ -460,6 +485,12 @@
       tones_img_index %= tones_images.length;
       document.getElementById(id + '-desc').textContent = tones_images_descriptions[tones_img_index];
       img = tones_images[tones_img_index];
+    }
+    else if(id == 'tq-img'){
+      tq_img_index++;
+      tq_img_index %= tq_images.length;
+      document.getElementById(id + '-desc').textContent = tq_images_descriptions[tq_img_index];
+      img = tq_images[tq_img_index];
     }
     else if(id == 'stars-img'){
       stars_img_index++;
